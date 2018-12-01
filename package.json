@@ -2,13 +2,9 @@
   "name": "iterable-pokedex",
   "version": "1.0.0",
   "description": "Comprehensive Pokedex for Gen 1-7",
-  "main": "./lib",
-  "devDependencies": {
-    "expect.js": "^0.3.1",
-    "mocha": "^5.2.0"
-  },
+  "main": "lib",
   "scripts": {
-    "test": "mocha --bail"
+    "prepare": "node bin/build"
   },
   "repository": "git@github.com:reconobt/iterable-pokedex.git",
   "keywords": [

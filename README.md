@@ -11,52 +11,32 @@ Then you can use the library:
 ```js
 const { findPokemon, findMove, findAbility, findType, findEggGroup, findGeneration, findNature, allPokemon, allMoves } = require('oakdex-pokedex');
 
-const eevee = findPokemon('Eevee')
-// returns data/pokemon/eevee.json
+const eevee = await findPokemon('Eevee')
 console.log(eevee.names.en); // Eeevee
 
-const charmander = findPokemon(4)
-// returns data/pokemon/charmander.json
-console.log(charmander.names.en); // Charmander
+const char = await lookupStats('Charmeleon')
+// { "speed": [ 3, 3 ], "power": [ 2, 4 ], "stamina": [ 2, 2 ], "skill": [ 3, 4 ], "jump": [ 3, 3 ] }
 
-const tackle = findMove('Tackle')
-// returns data/move/tackle.json
-console.log(m.names.en); // Tackle
+for await (const pokemon of getPokemon()) { // an async iterator of all pokemon
+  console.log(pokemon.toString()); // Charmander... etc
+}
 
-const contrary = findAbility('Contrary')
-// returns data/ability/contrary.json
-console.log(a.names.en); // Contrary
-
-const fairy = findType('Fairy')
-// returns data/type/fairy.json
-console.log(fairy.names.en); // Fairy
-
-const water1 = findEggGroup('Water 1')
-// returns data/egg_group/water_1.json
-console.log(water1.names.en); // Water 1
-
-const genVI = findGeneration('Generation VI')
-// returns data/generation/6.json
-console.log(genVI.names.en); // Generation VI
-
-const bold = findNature('Bold')
-// returns data/nature/bold.json
-console.log(bold.names.en); // Bold
-
-const allPokemon = allPokemon()
-console.log(allPokemon.length); // 802
-
-const darkPokemon = allPokemon({ type: 'Dark' })
-console.log(darkPokemon.length); // 46
-
-const humanLike = allPokemon({ egg_group: 'Human-Like' })
-console.log(humanLike.length); // 52
-
-const alola = allPokemon({ dex: 'alola' })
-console.log(alola.length); // 302
-
-const moves = allMoves({ type: 'Ground' })
-console.log(moves.length); // 26
+console.log(pokemon) // an array of all pokemon
+console.log(pokemonByName) // an object indexed by name of all pokemon
+console.log(moves) // an array of all moves
+console.log(movesByName) // an object indexed by name of all moves
+console.log(abilities) // an array of all abilities
+console.log(abilitiesByName) // an object indexed by name of all abilities
+console.log(eggGroups) // an array of all eggGroups
+console.log(eggGroupsByName) // an object indexed by name of all eggGroups
+console.log(types) // an array of all types
+console.log(typesByName) // an object indexed by name of all types
+console.log(regions) // an array of all regions
+console.log(regionsByName) // an object indexed by name of all regions
+console.log(generations) // an array of all generations
+console.log(generationsByName) // an object indexed by name of all generations
+console.log(natures) // an array of all natures
+console.log(naturesByName) // an object indexed by name of all natures
 ```
 
 ### Sprites
