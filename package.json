@@ -1,14 +1,8 @@
 {
-  "name": "oakdex-pokedex",
-  "version": "0.2.2",
+  "name": "iterable-pokedex",
+  "version": "1.0.0",
   "description": "Comprehensive Pokedex for Gen 1-7",
-  "main": "./src/oakdex_pokedex.js",
-  "directories": {
-    "doc": "doc"
-  },
-  "dependencies": {
-    "json-schema-to-markdown": "^1.0.3"
-  },
+  "main": "./lib",
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^5.2.0"
@@ -16,21 +10,18 @@
   "scripts": {
     "test": "mocha --bail"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jalyna/oakdex-pokedex.git"
-  },
+  "repository": "git@github.com:reconobt/iterable-pokedex.git",
   "keywords": [
     "json",
     "pokedex",
     "pokemon",
-    "json-schema",
-    "json-api"
+    "iterable",
+    "iterators"
   ],
-  "author": "Jalyna (https://github.com/jalyna)",
+  "author": "Francis Gulotta <wizard@roborooter.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jalyna/oakdex-pokedex/issues"
+    "url": "https://github.com/reconobt/iterable-pokedex/issues"
   },
-  "homepage": "https://github.com/jalyna/oakdex-pokedex#readme"
+  "homepage": "https://github.com/reconobt/iterable-pokedex#readme"
 }

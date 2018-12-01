@@ -1,5 +1,5 @@
 'use strict';
-const oakdexPokedex = require('../src/oakdex_pokedex');
+const oakdexPokedex = require('../');
 const expect = require('expect.js');
 const fs = require('fs');
 
