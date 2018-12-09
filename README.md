@@ -9,7 +9,7 @@ $ npm i iterable-pokedex
 Then you can use the library:
 
 ```js
-const { findPokemon, findMove, findAbility, findType, findEggGroup, findGeneration, findNature, allPokemon, allMoves } = require('oakdex-pokedex');
+const { findPokemon, findMove, findAbility, findType, findEggGroup, findGeneration, findNature, allPokemon, allMoves } = require('iterable-pokedex');
 
 const eevee = await findPokemon('Eevee')
 console.log(eevee.names.en); // Eeevee
